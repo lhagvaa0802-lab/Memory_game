@@ -1,23 +1,147 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
-.container {
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: black;
   display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 200px 200px 200px 200px;
-  background-color: dodgerblue;
-  padding: 10px;
-  gap: 10px;
+  place-items: center;
+  color: #fff;
 }
-.container div {
-  background-color: #f1f1f1;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
+
+.app {
+  width: 340px;
+  padding: 28px 22px;
+  border-radius: 28px;
+  background: grey;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
   text-align: center;
 }
-/* .box p {
-  display: none;
-} */
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff9f66, #ff6fcf);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  font-size: 26px;
+}
+
+h1 {
+  margin: 8px 0 4px;
+  color: #ff9f66;
+  font-size: 32px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.stats {
+  display: flex;
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.stat-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.stat-card small {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.stat-card h2 {
+  margin: 2px 0 0;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.card {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.05),
+    0 10px 20px rgba(0,0,0,0.4);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  opacity: 0.7;
+}
+
+.new-game {
+  width: 100%;
+  padding: 14px;
+  border-radius: 18px;
+  border: none;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.new-game:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+
+
+
+.card {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1); /* Visible "back" of the card */
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  /* HIDE THE EMOJI */
+  font-size: 40px;
+  user-select: none;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* SHOW THE EMOJI WHEN FLIPPED */
+.card.flipped {
+  font-size: 26px; 
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotateY(180deg);
+}
+
+/* KEEP EMOJI VISIBLE WHEN MATCHED */
+.card.matched {
+  font-size: 26px;
+  background: rgba(255, 159, 102, 0.2);
+  box-shadow: inset 0 0 0 2px #ff9f66;
+  opacity: 1;
+}

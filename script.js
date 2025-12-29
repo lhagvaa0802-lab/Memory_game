@@ -1,50 +1,33 @@
-const boxes = document.getElementsByClassName("box");
-const containerBox = document.getElementsByClassName("container_box");
+const emojis = ["🍇","🍓","🍒","🥝","🍍","🍑","🍇", "🍓", "🍒","🥝","🍍","🍑"];
+let flippedCards = [];
+let moves = 0;
+let matches = 0;
+let isLocked = false;
 
-// let compare = [];
-// for (let i = 0; i < boxes.length; i++) {
-//   const box = boxes[i];
+// Selection
+const grid = document.getElementById('game-grid');
 
-//   box.addEventListener("click", () => {
-//     compare.push({
-//       element: box,
-//       value: box.textContent,
-//     });
+function initGame() {
+    grid.innerHTML = '';
+    flippedCards = [];
+    moves = 0;
+    matches = 0;
+    isLocked = false;
+    
+   
 
-//     if (compare.length === 2) {
-//       checker();
-//       compare = [];
-//       console.log(compare);
-//     }
-//   });
-// }
-
-// const checker = () => {
-//   if (compare[0].value === compare[1].value) {
-//     console.log((compare[0].element.textContent = "0"));
-//     console.log((compare[1].element.textContent = "0"));
-//   }
-// };
-
-boxes = [
-  {
-    element: box,
-    value: box.textContent,
-  },
-  {
-    element: box,
-    value: box.textContent,
-  },
-  {
-    element: box,
-    value: box.textContent,
-  },
-  {
-    element: box,
-    value: box.textContent,
-  },
-];
-
-const randomGenerotor = () => {
-  const box = boxes[Math.floor(Math.random() * items.length)];
+    const shuffled = emojis.sort(() => Math.random() - 0.5);
+    shuffled.forEach(emoji => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.dataset.value = emoji;
+        card.textContent = emoji;
+        
+        grid.appendChild(card);
+         console.log(card.textContent);
+    });
+    console.log(shuffled)
+   
 };
+
+ initGame();

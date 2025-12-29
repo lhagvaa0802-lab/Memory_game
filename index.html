@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Memory game</title>
-  </head>
-  <body class="container" id="container_box">
-    <div class="box"><p>1</p></div>
-    <div class="box"><p>2</p></div>
-    <div class="box"><p>3</p></div>
-    <div class="box"><p>4</p></div>
-    <div class="box"><p>5</p></div>
-    <div class="box"><p>6</p></div>
-    <div class="box"><p>6</p></div>
-    <div class="box"><p>5</p></div>
-    <div class="box"><p>4</p></div>
-    <div class="box"><p>3</p></div>
-    <div class="box"><p>2</p></div>
-    <div class="box"><p>1</p></div>
-    <script src="./script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Game UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <div class="logo">🧠</div>
+
+  <h1>Memory</h1>
+  <p class="subtitle">Find all matching pairs</p>
+
+  <div class="stats">
+    <div class="stat-card">
+      <span class="icon">🔄</span>
+      <div>
+        <small>MOVES</small>
+        <h2>0</h2>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <span class="icon">🏆</span>
+      <div>
+        <small>MATCHES</small>
+        <h2>0/6</h2>
+      </div>
+    </div>
+  </div>
+
+ <div class="grid" id="game-grid">
+  
+ 
+
+  <button class="new-game">🔁 New Game</button>
+</div>
+<script src="./script.js"></script>
+</body>
 </html>
+s
